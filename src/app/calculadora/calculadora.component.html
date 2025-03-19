@@ -1,0 +1,17 @@
+<label>AC1:</label>
+<input name="nota1" [(ngModel)]="nota1" type="number"/>
+
+<label>AC2:</label>
+<input name="nota2" [(ngModel)]="nota2" type="number"/>
+
+<label>AG:</label>
+<input name="nota3" [(ngModel)]="nota3" type="number"/>
+
+<label>AF:</label>
+<input name="nota4" [(ngModel)]="nota4" type="number"/>
+
+<button (click)="calcular()">Calcular Média</button>
+
+<h5>Média: {{ media }}</h5>
+
+<h5>Situação: {{ situacao }}</h5>

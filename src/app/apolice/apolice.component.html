@@ -1,0 +1,21 @@
+<h2>Formulário de Apólice de Seguro</h2>
+
+<label>Nome do Segurado:</label>
+<input type="text" [(ngModel)]="nome">
+
+<label>Sexo:</label>
+<select [(ngModel)]="sexo">
+    <option value="masculino">Masculino</option>
+    <option value="feminino">Feminino</option>
+</select>
+
+<label>Idade:</label>
+<input type="number" [(ngModel)]="idade">
+
+<label>Valor do Automóvel:</label>
+<input type="number" [(ngModel)]="valorAutomovel">
+
+<button (click)="calcularApolice()">Calcular Apólice</button>
+
+<!-- Exibe o resultado apenas se valorApolice não for nulo -->
+<h3 *ngIf="valorApolice !== null">Valor da Apólice: R$ {{ valorApolice?.toFixed(2) ?? '0.00' }}</h3>
